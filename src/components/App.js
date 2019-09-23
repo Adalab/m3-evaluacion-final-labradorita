@@ -37,7 +37,7 @@ class App extends React.Component {
   render() {
     // destructuring
     const { characters, filterName } = this.state;
-    console.log("Comprobar", this.state.characters);
+    //console.log("Comprobar", this.state.characters);
     return (
       <div className="app">
         <h1 className="app__title">RICK AND MORTY</h1>
@@ -57,9 +57,11 @@ class App extends React.Component {
             }}
           />
           <Route
-            path="/detail/:id"
+            path="/detail/:characterId"
             render={routerProps => {
-              return <Detail routerProps={routerProps} />;
+              return (
+                <Detail routerProps={routerProps} characters={characters} />
+              );
             }}
           />
         </Switch>
