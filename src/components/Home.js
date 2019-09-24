@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import List from "./List";
+import CharacterList from "./CharacterList";
 import FilterByName from "./FilterByName";
 
 const Home = props => {
@@ -8,12 +8,12 @@ const Home = props => {
   return (
     <React.Fragment>
       <FilterByName value={filterName} getUserFilter={getUserFilter} />
-      <List characters={characters} filterName={value} />
+      <CharacterList characters={characters} filterName={value} />
     </React.Fragment>
   );
 };
 
-List.propTypes = {
+CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   value: PropTypes.string,
   getUserFilter: PropTypes.func,

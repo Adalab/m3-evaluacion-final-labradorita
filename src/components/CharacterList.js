@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Card from "./Card";
+import CharacterCard from "./CharacterCard";
 import error from "../images/error.png";
-import "../stylesheets/list.scss";
+import "../stylesheets/characterList.scss";
 
-const List = props => {
+const CharacterList = props => {
   const { characters } = props;
 
   if (characters.length === 0) {
@@ -24,7 +24,7 @@ const List = props => {
           return (
             <li className="character" key={character.id}>
               <Link to={`/detail/${character.id}`} className="character__link">
-                <Card
+                <CharacterCard
                   name={character.name}
                   species={character.species}
                   image={character.image}
@@ -38,9 +38,9 @@ const List = props => {
   }
 };
 
-List.propTypes = {
+CharacterList.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   filterName: PropTypes.string.isRequired
 };
 
-export default List;
+export default CharacterList;

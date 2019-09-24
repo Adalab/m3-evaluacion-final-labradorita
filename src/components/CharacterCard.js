@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../stylesheets/card.scss";
+import "../stylesheets/characterCard.scss";
 
-const Card = props => {
+const CharacterCard = props => {
   const { name, species, image } = props;
   return (
     <div className="card">
@@ -16,9 +16,9 @@ const Card = props => {
     </div>
   );
 };
-export default Card;
+export default CharacterCard;
 
-Card.propTypes = {
+CharacterCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired

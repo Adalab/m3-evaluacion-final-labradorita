@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { fetchData } from "../services/fetchData";
 import Home from "./Home";
-import Detail from "./Detail";
+import CharacterDetail from "./CharacterDetail";
 import Header from "./Header";
 import "../stylesheets/app.scss";
 
@@ -68,7 +68,10 @@ class App extends React.Component {
             path="/detail/:characterId"
             render={routerProps => {
               return (
-                <Detail routerProps={routerProps} characters={characters} />
+                <CharacterDetail
+                  routerProps={routerProps}
+                  characters={characters}
+                />
               );
             }}
           />

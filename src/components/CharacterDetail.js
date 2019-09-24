@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "../stylesheets/detail.scss";
+import "../stylesheets/characterDetail.scss";
 import error from "../images/error.png";
 
-const Detail = props => {
+const CharacterDetail = props => {
   const { routerProps, characters } = props;
   const characterId = parseInt(routerProps.match.params.characterId);
   const character = characters.find(item => item.id === characterId);
@@ -28,7 +28,7 @@ const Detail = props => {
   // console.log(characterId);
   // console.log(characters.length);
 
-  if (character) {
+  if (CharacterDetail) {
     const { image, name, origin, episode } = character;
     return (
       <div className="characterDetail">
@@ -68,9 +68,9 @@ const Detail = props => {
   }
 };
 
-Detail.propTypes = {
+CharacterDetail.propTypes = {
   characters: PropTypes.arrayOf(PropTypes.object).isRequired,
   routerProps: PropTypes.object.isRequired
 };
 
-export default Detail;
+export default CharacterDetail;
