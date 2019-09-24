@@ -9,8 +9,10 @@ const Card = props => {
       <div className="card__img">
         <img src={image} alt={name}></img>
       </div>
-      <h2 className="card__name">{name}</h2>
-      <h3 className="card_species"> {species}</h3>
+      <section className="card__text">
+        <h2 className="card__name">{name}</h2>
+        <h3 className="card__species"> {species}</h3>
+      </section>
     </div>
   );
 };

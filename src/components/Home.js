@@ -4,7 +4,6 @@ import List from "./List";
 import FilterByName from "./FilterByName";
 
 const Home = props => {
-  //destructuring
   const { getUserFilter, value, characters, filterName } = props;
   return (
     <React.Fragment>

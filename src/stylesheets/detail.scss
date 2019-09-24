@@ -4,7 +4,12 @@
   padding: 20px 30px;
   margin-left: 30px;
   text-align: left;
-  line-height: 1.4;
+  line-height: 1.5;
+
+  @media all and (max-width: 780px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .characterDetail__text {
@@ -14,9 +19,7 @@
   flex-direction: column;
   align-self: center;
   @media all and (max-width: 780px) {
-    .characterDetail__text__title {
-      padding-top: 20px;
-    }
+    padding-top: 20px;
   }
 }
 .characterDetail__link {
@@ -26,15 +29,23 @@
   text-align: right;
   line-height: 30px;
   text-decoration: none;
+  font-size: 24px;
+  padding: 10px;
 }
 
-.linkError__text {
-  padding-top: 50px;
-}
+.linkError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-@media all and (max-width: 780px) {
-  .characterDetail__card {
-    display: flex;
-    flex-direction: column;
+  &__text {
+    padding: 50px;
+    font-size: 28px;
+    color: white;
+  }
+
+  &__img {
+    height: 300px;
   }
 }

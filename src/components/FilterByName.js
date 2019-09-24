@@ -6,9 +6,6 @@ const FilterByName = props => {
   const { filterName, getUserFilter } = props;
   return (
     <div className="search__container">
-      {/* <label htmlFor="search" className="search__label">
-        Busca a tu personaje:
-      </label> */}
       <input
         className="search__input"
         type="text"

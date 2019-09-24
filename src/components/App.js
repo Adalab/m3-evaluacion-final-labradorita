@@ -38,6 +38,12 @@ class App extends React.Component {
   render() {
     // destructuring
     const { characters, filterName } = this.state;
+
+    //Personajes cuyo name coincide con el valor del input
+    const myFilterCharacters = characters.filter(myFilterName => {
+      return myFilterName.name.toLowerCase().includes(filterName.toLowerCase());
+    });
+
     //console.log("Comprobar", this.state.characters);
     return (
       <div className="app">
@@ -52,7 +58,7 @@ class App extends React.Component {
                 <Home
                   value={filterName}
                   getUserFilter={this.getUserFilter}
-                  characters={characters}
+                  characters={myFilterCharacters}
                   filterName={filterName}
                 />
               );
