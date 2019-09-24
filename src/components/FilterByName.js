@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../stylesheets/filterByName.scss";
 
 const FilterByName = props => {
   const { filterName, getUserFilter } = props;
   return (
     <div className="search__container">
-      <label htmlFor="search" className="search__label">
+      {/* <label htmlFor="search" className="search__label">
         Busca a tu personaje:
-      </label>
+      </label> */}
       <input
         className="search__input"
         type="text"

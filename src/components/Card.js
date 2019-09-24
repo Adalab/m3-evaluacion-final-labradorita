@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../stylesheets/card.scss";
 
 const Card = props => {
   const { name, species, image } = props;
@@ -9,7 +10,7 @@ const Card = props => {
         <img src={image} alt={name}></img>
       </div>
       <h2 className="card__name">{name}</h2>
-      <h3 className="species"> {species}</h3>
+      <h3 className="card_species"> {species}</h3>
     </div>
   );
 };

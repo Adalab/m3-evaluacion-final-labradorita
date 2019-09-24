@@ -3,7 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import { fetchData } from "../services/fetchData";
 import Home from "./Home";
 import Detail from "./Detail";
-import "../stylesheets/App.css";
+import Header from "./Header";
+import "../stylesheets/app.scss";
 
 class App extends React.Component {
   constructor(props) {
@@ -40,7 +41,8 @@ class App extends React.Component {
     //console.log("Comprobar", this.state.characters);
     return (
       <div className="app">
-        <h1 className="app__title">RICK AND MORTY</h1>
+        <Header />
+
         <Switch>
           <Route
             exact
@@ -65,10 +67,6 @@ class App extends React.Component {
             }}
           />
         </Switch>
-
-        <footer>
-          <p>SOY EL FOOTER</p>
-        </footer>
       </div>
     );
   }

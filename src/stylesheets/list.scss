@@ -1,0 +1,33 @@
+.characters {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: 450px;
+  grid-gap: 40px;
+  text-align: left;
+  justify-content: center;
+  margin: 30px;
+
+  &__img {
+    width: 80%;
+  }
+}
+@media all and (max-width: 780px) {
+  .characters {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media all and (max-width: 500px) {
+  .characters {
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
+.characters {
+  margin: 10px;
+
+  width: 300px;
+}

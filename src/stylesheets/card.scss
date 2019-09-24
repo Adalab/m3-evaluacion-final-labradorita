@@ -1,0 +1,21 @@
+.card {
+  margin: 10px;
+
+  width: 200px;
+  @media screen and (max-width: 320px) {
+    width: 300px;
+  }
+}
+
+.card__img {
+}
+
+.card__name {
+  color: white;
+  padding: 5px 0 5px 0;
+}
+
+.card_species {
+  color: white;
+  padding: 5px 0 5px 0;
+}
