@@ -10,25 +10,24 @@ const CharacterDetail = props => {
   const character = characters.find(item => item.id === characterId);
   let characterStatus = "";
   let speciesStatus = "";
+  if (character) {
+    if (character.status === "Alive") {
+      characterStatus = " ❤️";
+    } else if (character.status === "Dead") {
+      characterStatus = " ☠️";
+    } else {
+      characterStatus = " ❔";
+    }
 
-  if (character.status === "Alive") {
-    characterStatus = " ❤️";
-  } else if (character.status === "Dead") {
-    characterStatus = " ☠️";
-  } else {
-    characterStatus = " ❔";
-  }
+    if (character.species === "Human") {
+      speciesStatus = " 👫";
+    } else {
+      speciesStatus = " 👽";
+    }
 
-  if (character.species === "Human") {
-    speciesStatus = " 👫";
-  } else {
-    speciesStatus = " 👽";
-  }
+    // console.log(characterId);
+    // console.log(characters.length);
 
-  // console.log(characterId);
-  // console.log(characters.length);
-
-  if (CharacterDetail) {
     const { image, name, origin, episode } = character;
     return (
       <div className="characterDetail">
